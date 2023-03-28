@@ -14,7 +14,7 @@ class Solution:
             if remaining >= 0:
                 if pos < startPos:
                     temp = max(pos + remaining, startPos)
-                    j = bisect_left(fruits, [temp, float('inf')])
+                    j = bisect_right(fruits, [temp, float('inf')])
                     if j == len(fruits):
                         j -= 1
                     elif fruits[j][0] > temp:
